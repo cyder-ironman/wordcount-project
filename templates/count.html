@@ -1,0 +1,27 @@
+<h1> COUNTER </h1>
+
+<a href="{% url 'home'%}"> Start Again </a>
+<a href="{% url 'about'%}"> About </a>
+
+<br>
+<br>
+
+<h1>
+
+{{fulltext}}
+
+</h1>
+
+<h1> There are {{count}} words in your lousy text </h1>
+
+<h1> Word Count <h1>
+
+{% for word, totalcount in sortedwords %}
+
+<h2>
+{{word}} - {{ totalcount}}
+</h2>
+
+
+
+{% endfor %}
